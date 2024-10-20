@@ -32,7 +32,6 @@ This backend application allows users to manage and share their daily expenses b
 - **Flask-JWT-Extended**: Authentication using JWT
 - **Flask-Migrate**: Database migrations
 - **SQLite**: Database
-- **Docker**: Containerization for deployment
 
 ---
 
@@ -97,6 +96,23 @@ This backend application allows users to manage and share their daily expenses b
 4. **Download balance sheet**:
    - CSV: `GET /api/expenses/export/csv`
    - PDF: `GET /api/expenses/export/pdf`
+
+5. **Update expense**: `PUT /api/expenses/<expense_id>`
+   - Request body:
+     ```json
+     {
+       "description": "Dinner",
+       "total_amount": 500,
+       "split_method": "exact",
+       "created_by": 1,
+       "splits": [
+         {"user_id": 1, "amount_owed": 200},
+         {"user_id": 2, "amount_owed": 300}
+       ]
+     }
+     ```
+
+6. **Delete expense**: `DELETE /api/expenses/<expense_id>`
 
 ---
 
