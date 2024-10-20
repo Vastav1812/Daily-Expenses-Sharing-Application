@@ -55,8 +55,8 @@ This backend application allows users to manage and share their daily expenses b
    - Request body: 
      ```json
      { 
-       "name": "John", 
-       "email": "john@example.com", 
+       "name": "Vastav", 
+       "email": "vastav1812@gmail.com", 
        "password": "password123", 
        "mobile": "9876543210" 
      }
@@ -66,7 +66,7 @@ This backend application allows users to manage and share their daily expenses b
    - Request body: 
      ```json
      { 
-       "email": "john@example.com", 
+       "email": "vastav1812@gmail.com", 
        "password": "password123" 
      }
      ```
